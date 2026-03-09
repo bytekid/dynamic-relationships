@@ -291,10 +291,10 @@ if __name__ == "__main__":
   types_of_objects = get_object_type_dict(ocel, object_types)
 
   # determine static relationships
-  #object_summary = get_object_summary(ocel)
-  #relationships = static_object_relationships(object_summary, types_of_objects, object_types)
-  #to_one, to_almost_one, to_many = classify_relationships(relationships, silent = False)
-  #classify_relationship_pairs(to_one, to_almost_one, to_many)
+  object_summary = get_object_summary(ocel)
+  relationships = static_object_relationships(object_summary, types_of_objects, object_types)
+  to_one, to_almost_one, to_many = classify_relationships(relationships, silent = False)
+  classify_relationship_pairs(to_one, to_almost_one, to_many)
   
   # determine dynamic relationships
   relationships = dynamic_object_relationships(ocel, types_of_objects, object_types)
