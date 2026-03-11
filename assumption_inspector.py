@@ -158,10 +158,6 @@ def find_reference_types(ocel, object_types):
   refcombos = 1
   for (e, objts) in objtype_count_for_events.items():
     reftypes[e] = [ t for t in objts.keys() if min(objts[t]) == 1 and  max(objts[t]) == 1]
-    if len(reftypes[e]) > 1:
-      reftypes[e].remove("Session")  # AoE
-    if len(reftypes[e]) > 1:
-      reftypes[e].remove("Match") # AoE
     print(" %s %d reftype candidates" % (e, len(reftypes[e])), reftypes[e])
     # refcombos = refcombos * len(reftypes[e])
     for t in objts.keys():
